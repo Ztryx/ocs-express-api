@@ -47,8 +47,24 @@ it('Properly Sorted by Years', async (done) => {
     expect(res.body).toHaveProperty('message');
     expect(res.body).toHaveProperty('data');
     expect(res.body.message).toEqual('success');
-    for(let i = 0; i < res.body.data.length - 1; i++) {
-        expect(res.body.data[i].year).toBeGreaterThan(res.body.data[i + 1].year);
+    if(res.body.data.length > 1) {
+        for(let i = 0; i < res.body.data.length - 1; i++) {
+            expect(res.body.data[i].year).toBeGreaterThan(res.body.data[i + 1].year);
+        }
+    }
+    done();
+});
+
+it('Properly Sorted by Score', async (done) => {
+    const res = await request(server).get('/api/athletes');
+    expect(res.statusCode).toEqual(200);
+    expect(res.body).toHaveProperty('message');
+    expect(res.body).toHaveProperty('data');
+    expect(res.body.message).toEqual('success');
+    for(let i = 0; i < res.body.data.length; i++) {
+        for(let j = 0; j < res.body.data[i].athletes.length - 1; j++) {
+            expect(res.body.data[i].athletes[j].score).toBeGreaterThanOrEqual(res.body.data[i].athletes[j + 1].score);
+        }
     }
     done();
 });
