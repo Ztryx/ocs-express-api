@@ -1,0 +1,20 @@
+{
+  "name": "express-api",
+  "version": "1.0.0",
+  "description": "EXPRESS Rest API for OCS application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "No test defined"
+  },
+  "engines": {
+    "node": "12.13.0"
+  },
+  "author": "Andrés Jesús Díaz Santos",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "sqlite3": "^4.2.0"
+  }
+}
