@@ -17,7 +17,7 @@ npm run test
 ```
 npm run start
 ```
-It can be loaded as well with nodemon
+It can be loaded as well with *nodemon*
 ## API Interface
 ```
 / 
