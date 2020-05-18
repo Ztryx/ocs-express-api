@@ -32,16 +32,16 @@ Root endpoint, It should retrieves JSON with message "OK" in order to check that
   }
 }
 ```
-GET API endpoint that retrieves array of games descendingly sorted by year, where should be found information about each GAME,
+**GET API** endpoint that retrieves array of games descendingly sorted by year, where should be found information about each *GAME*,
 including array of athletes descendingly sorted by score in current game.
 ```
 /api/athletes/{id}
 ```
-GET API endpoint that retrieves an athlete object with detailed information.
+**GET API** endpoint that retrieves an athlete object with detailed information.
 ```
 {any other endpoint not defined}
 ```
-Any other endpoint not defined should return 404 HTTP error.
+Any other endpoint not defined should return *404 HTTP error*.
 ## Example
 There has been deployed to Heroku a prod example for this app, that could be checked here:
 [API on Heroku](https://ocs-express-api.herokuapp.com)
