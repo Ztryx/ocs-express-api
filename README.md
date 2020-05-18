@@ -1,6 +1,6 @@
 # ocs-express-api
 This repository has been created with Express and JEST
-Example of stack:
+### Example of stack:
 - Node version: 12.13.0
 - NPM version: 6.12.0
 ## How to run
